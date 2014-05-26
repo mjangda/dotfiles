@@ -1,0 +1,8 @@
+[user]
+	email = batmoo@gmail.com
+	name = Mohammad Jangda
+
+[alias]
+	ci = commit
+	st = status
+	co = checkout
