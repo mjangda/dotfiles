@@ -72,18 +72,20 @@ Bundle 'gmarik/vundle'
 "
 " original repos on github
 Bundle "kien/ctrlp.vim"
+Bundle "bling/vim-airline"
+Bundle "mileszs/ack.vim"
+Bundle 'scrooloose/syntastic'
+
 " vim-scripts repos
 Bundle "L9"
 Bundle 'FuzzyFinder'
+
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
+
 " git repos on your local machine (ie. when working on your own plugin)
 "Bundle 'file:///Users/gmarik/path/to/plugin'
-" ...
-Bundle 'ack.vim'
-Bundle 'scrooloose/syntastic'
 
-"...All your other bundles...
 if vundle_installing == 1
 	echo "Installing Bundles, please ignore key map error messages"
 	echo ""
