@@ -43,6 +43,14 @@ set incsearch
 set completeopt=menuone,preview
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 
+" Set fancy title
+set title
+
+" vim-airline settings
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+
 """""""""""""""""""""""""""""""
 " START: Vundle Settings
 """""""""""""""""""""""""""""""
