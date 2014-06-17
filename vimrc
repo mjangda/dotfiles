@@ -29,9 +29,15 @@ set t_Co=256 " compat with secureCRT
 set gfn=Inconsolata:h10:cANSI
 colorscheme wombat256mod 
 set background=dark
+if has('gui_running')
+  set guifont=Monospace\ 20
+endif
 
 " Enable incremental search
 set incsearch
+
+" Enable clipboard integration
+set clipboard=unnamedplus
 
 " run file with PHP CLI (CTRL-M)
 :autocmd FileType php noremap <C-M> :w!<CR>:!/usr/local/bin/php %<CR>
