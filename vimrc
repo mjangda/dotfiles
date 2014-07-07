@@ -89,6 +89,7 @@ Bundle "kien/ctrlp.vim"
 Bundle "bling/vim-airline"
 Bundle "mileszs/ack.vim"
 Bundle 'scrooloose/syntastic'
+Bundle 'scrooloose/nerdtree'
 Bundle 'mhinz/vim-signify'
 
 " vim-scripts repos
