@@ -100,6 +100,7 @@ Bundle "mileszs/ack.vim"
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
 Bundle 'mhinz/vim-signify'
+Bundle 'Shougo/unite.vim'
 
 " vim-scripts repos
 Bundle "L9"
