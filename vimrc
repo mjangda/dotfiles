@@ -27,7 +27,7 @@ set noswapfile
 " Font and color scheme
 set t_Co=256 " compat with secureCRT
 set gfn=Inconsolata:h10:cANSI
-colorscheme wombat256mod 
+colorscheme molokai
 set background=dark
 if has('gui_running')
   set guifont=Monospace\ 20
@@ -64,7 +64,7 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 "" Close vim if only nerdtree left
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 "" ctrl+n shortcut
-map <C-n> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeTabsToggle<CR>
 
 """""""""""""""""""""""""""""""
 " START: Vundle Settings
@@ -99,8 +99,10 @@ Bundle "bling/vim-airline"
 Bundle "mileszs/ack.vim"
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
+Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'mhinz/vim-signify'
 Bundle 'Shougo/unite.vim'
+Bundle 'fatih/vim-go'
 
 " vim-scripts repos
 Bundle "L9"
