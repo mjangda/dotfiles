@@ -59,8 +59,8 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 
 " nerdtree config
 "" auto-open nt window on start
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+"autocmd StdinReadPre * let s:std_in=1
+"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 "" Close vim if only nerdtree left
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 "" ctrl+n shortcut
