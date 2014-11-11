@@ -4,11 +4,6 @@
 [ -z "$PS1" ] && return
 shopt -s checkwinsize
 
-# enable color support of ls and also add handy aliases
-if [ "$TERM" != "dumb" ]; then
-    eval "`dircolors -b`"
-    alias ll='ls --format=vertical --color=auto -lah'
-fi
 case "$TERM" in
 xterm*|rxvt*)
     PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
@@ -16,12 +11,6 @@ xterm*|rxvt*)
 *)
     ;;
 esac
-
-
-export LS_OPTIONS='--color=auto'
-eval "`dircolors`"
-alias ll='ls $LS_OPTIONS -lah'
-alias ls='ls --color=auto'
 
 # START: batmoo mods
 
