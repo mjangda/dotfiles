@@ -24,6 +24,11 @@ alias ll='ls $LS_OPTIONS -lah'
 alias ls='ls --color=auto'
 
 # START: batmoo mods
+
+# Go
+export GOPATH=$HOME/Sites/gocode
+export PATH=$PATH:$GOPATH/bin
+
 # Editor
 export VISUAL=vim
 export EDITOR=vim

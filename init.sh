@@ -1,16 +1,32 @@
 #!/bin/bash
-echo "Setting up dotfiles"
 
-# TODO: check actual dotfiles location
-DOTFILES_PATH=$(pwd)
-# TODO: check that file doesn't exist already
-ln -s $DOTFILES_PATH/vimrc $HOME/.vimrc
+symlink () {
+  src=$1
+  target=$2
+
+  echo "Adding symlink for $src => $target"
+
+  if [ -f $src ] && [ ! -f $target ]; then
+    ln -s $src $target
+    echo "-- added"
+  else
+    echo "-- skipped; already exists"
+  fi
+}
+
+echo "Setting up dotfiles"
 mkdir -p $HOME/.vim/colors/
-ln -s $DOTFILES_PATH/vim/colors/molokai.vim $HOME/.vim/colors/molokai.vim
-ln -s $DOTFILES_PATH/vim/colors/wombat256mod.vim $HOME/.vim/colors/wombat256mod.vim
-ln -s $DOTFILES_PATH/vim/colors/wombat256.vim $HOME/.vim/colors/wombat256.vim
-ln -s $DOTFILES_PATH/vim/colors/wombat.vim $HOME/.vim/colors/wombat.vim
-ln -s $DOTFILES_PATH/gitconfig $HOME/.gitconfig
+
+DOTFILES_PATH=$(pwd)
+symlink $DOTFILES_PATH/vimrc $HOME/.vimrc
+symlink $DOTFILES_PATH/vim/colors/molokai.vim $HOME/.vim/colors/molokai.vim
+symlink $DOTFILES_PATH/vim/colors/wombat256mod.vim $HOME/.vim/colors/wombat256mod.vim
+symlink $DOTFILES_PATH/vim/colors/wombat256.vim $HOME/.vim/colors/wombat256.vim
+symlink $DOTFILES_PATH/vim/colors/wombat.vim $HOME/.vim/colors/wombat.vim
+symlink $DOTFILES_PATH/gitconfig $HOME/.gitconfig
+symlink $DOTFILES_PATH/bash_profile $HOME/.bash_profile
+symlink $DOTFILES_PATH/bashrc $HOME/.bashrc
+symlink $DOTFILES_PATH/bash_aliases $HOME/.bash_aliases
 
 VUNDLE_DIR="$HOME/.vim/bundle/Vundle.vim" 
 if [ ! -d $VUNDLE_DIR ]; then
