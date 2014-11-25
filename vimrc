@@ -75,6 +75,12 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 "" ctrl+n shortcut
 map <C-n> :NERDTreeTabsToggle<CR>
 
+""""""""""""""""""""""""""""""
+" golang-specific settings 
+""""""""""""""""""""""""""""""
+" goimports > gofmt
+let g:go_fmt_command = "goimports"
+
 """""""""""""""""""""""""""""""
 " START: Vundle Settings
 """""""""""""""""""""""""""""""
