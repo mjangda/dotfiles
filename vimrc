@@ -7,6 +7,12 @@ filetype on
 filetype plugin on
 syntax on
 
+" Persistent undo
+set undofile
+set undodir=$HOME/.vim/undo
+set undolevels=1000
+set undoreload=10000
+
 " Keep a bunch of command line history
 set history=1000
 
@@ -103,6 +109,7 @@ Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'mhinz/vim-signify'
 Bundle 'Shougo/unite.vim'
 Bundle 'fatih/vim-go'
+Bundle 'jelera/vim-javascript-syntax'
 
 " vim-scripts repos
 Bundle "L9"
