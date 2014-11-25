@@ -16,6 +16,9 @@ set undoreload=10000
 " Keep a bunch of command line history
 set history=1000
 
+" Only hide buffers on switch
+set hidden
+
 " Show the cursor position and line numbers
 set ruler
 set number
