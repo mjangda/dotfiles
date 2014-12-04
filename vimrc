@@ -1,3 +1,7 @@
+" Leader
+set showcmd "show leader in status
+let mapleader = " "
+
 " Smart case sensitivity
 set ignorecase
 set smartcase
@@ -84,6 +88,18 @@ let g:go_fmt_command = "goimports"
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
+
+" Keyboard Shortcut Maps
+map <C-j> :bp<CR>
+map <C-k> :bn<CR>
+
+" vim-go
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
 
 """""""""""""""""""""""""""""""
 " START: Vundle Settings
