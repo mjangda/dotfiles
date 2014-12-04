@@ -80,7 +80,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 map <C-n> :NERDTreeTabsToggle<CR>
 
 """"""""""""""""""""""""""""""
-" golang-specific settings 
+" vim-go - golang-specific settings 
 """"""""""""""""""""""""""""""
 " goimports > gofmt
 let g:go_fmt_command = "goimports"
@@ -88,12 +88,8 @@ let g:go_fmt_command = "goimports"
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
-
-" Keyboard Shortcut Maps
-map <C-j> :bp<CR>
-map <C-k> :bn<CR>
-
-" vim-go
+let g:go_auto_type_info = 1
+au FileType go nmap <Leader>i <Plug>(go-info)
 au FileType go nmap <Leader>gd <Plug>(go-doc)
 au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
 au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
@@ -101,7 +97,11 @@ au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
 
-"""""""""""""""""""""""""""""""
+" Keyboard Shortcut Maps
+map <C-j> :bp<CR>
+map <C-k> :bn<CR>
+
+" """""""""""""""""""""""""""""""
 " START: Vundle Settings
 """""""""""""""""""""""""""""""
 set nocompatible               " be iMproved
