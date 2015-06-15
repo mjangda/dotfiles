@@ -58,26 +58,30 @@ set clipboard=unnamedplus
 " PHP parser check (CTRL-L)
 :autocmd FileType php noremap <C-L> :!/usr/local/bin/php -l %<CR>
 
-" PHP Autocomplete Preview
-set completeopt=menuone,preview
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-
 " Set fancy title
 set title
+
+:autocmd Filetype javascript setlocal ts=2 sw=2 sts=0 noexpandtab
 
 " vim-airline settings
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 
-" nerdtree config
-"" auto-open nt window on start
-"autocmd StdinReadPre * let s:std_in=1
-"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-"" Close vim if only nerdtree left
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-"" ctrl+n shortcut
-map <C-n> :NERDTreeTabsToggle<CR>
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 1
+
+let g:syntastic_javascript_checkers = ['jsxhint']
+
+""" vim-jsx """
+let g:jsx_ext_required = 0
 
 """"""""""""""""""""""""""""""
 " vim-go - golang-specific settings 
@@ -88,7 +92,7 @@ let g:go_fmt_command = "goimports"
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
-let g:go_auto_type_info = 1
+let g:go_auto_type_info = 0
 au FileType go nmap <Leader>i <Plug>(go-info)
 au FileType go nmap <Leader>gd <Plug>(go-doc)
 au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
@@ -133,12 +137,11 @@ Bundle "kien/ctrlp.vim"
 Bundle "bling/vim-airline"
 Bundle "mileszs/ack.vim"
 Bundle 'scrooloose/syntastic'
-Bundle 'scrooloose/nerdtree'
-Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'mhinz/vim-signify'
-Bundle 'Shougo/unite.vim'
 Bundle 'fatih/vim-go'
-Bundle 'jelera/vim-javascript-syntax'
+Bundle 'pangloss/vim-javascript'
+Bundle 'mxw/vim-jsx'
+Bundle 'mhinz/vim-startify'
 
 " vim-scripts repos
 Bundle "L9"
