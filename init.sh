@@ -27,6 +27,7 @@ symlink $DOTFILES_PATH/gitconfig $HOME/.gitconfig
 symlink $DOTFILES_PATH/bash_profile $HOME/.bash_profile
 symlink $DOTFILES_PATH/bashrc $HOME/.bashrc
 symlink $DOTFILES_PATH/bash_aliases $HOME/.bash_aliases
+symlink $DOTFILES_PATH/zshrc $HOME/.zshrc
 
 VUNDLE_DIR="$HOME/.vim/bundle/Vundle.vim" 
 if [ ! -d $VUNDLE_DIR ]; then
