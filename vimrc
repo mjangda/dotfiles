@@ -78,7 +78,8 @@ set statusline+=%*
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 1
 
-let g:syntastic_javascript_checkers = ['jsxhint']
+""let g:syntastic_javascript_checkers = ['jsxhint']
+let g:syntastic_javascript_checkers = ['eslint']
 
 """ vim-jsx """
 let g:jsx_ext_required = 0
@@ -142,6 +143,7 @@ Bundle 'fatih/vim-go'
 Bundle 'pangloss/vim-javascript'
 Bundle 'mxw/vim-jsx'
 Bundle 'mhinz/vim-startify'
+Bundle 'tpope/vim-surround'
 
 " vim-scripts repos
 Bundle "L9"

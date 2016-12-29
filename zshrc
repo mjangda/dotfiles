@@ -7,11 +7,20 @@ export PATH=$PATH:/usr/local/share/npm/bin
 export VISUAL=vim
 export EDITOR=vim
 
+# a8c
+alias wpproxy='/usr/bin/ssh-add -K ~/.ssh/wp_id_rsa && autossh -M 1213 wpproxy -N -D 8080'
+
 # PHP
 alias php='php -d display_errors=stderr -d xdebug.cli_color=1'
 
 # SVN
 alias p='patch -p0 -i'
+
+# Git
+alias git=hub
+
+# Workaround for EMFILE errors
+ulimit -n 2048
 
 ###-begin-npm-completion-###
 #
