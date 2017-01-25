@@ -12,3 +12,5 @@
 	insteadOf = https://github.com/
 [core]
 	excludesfile = ~/dotfiles/.gitignore_global
+[help]
+	autoCorrect = -1
